@@ -1,0 +1,869 @@
+﻿<!DOCTYPE html>
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+
+
+
+
+
+<head>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <title></title>
+
+    <style>
+
+        .office-form-question-element {
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+
+        .office-form-question-choice + .office-form-question-choice {
+            margin-top: 20px;
+        }
+
+        .checkbox, .radio {
+            position: relative;
+            display: block;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+
+        .testbox {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: inherit;
+            background-color: #EAEAEA;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 100%;
+            width: 100%;
+        }
+
+        .survey-data-css {
+            padding: 20px 30px 70px;
+            background: #FFF;
+            opacity: 0.97;
+        }
+
+
+        .headlinestyle {
+            display: flex;
+            justify-content: center;
+            padding: 20px 10px 70px;
+            background: #FFF;
+            opacity: 0.97;
+            align-items: center;
+            background-image: initial;
+            background-position-x: initial;
+            background-position-y: initial;
+            background-size: initial;
+            background-attachment: initial;
+            background-origin: initial;
+            background-clip: initial;
+            background-color: rgb(14, 137, 6);
+            color: #ffffff;
+            
+            overflow: hidden;           
+
+            
+        }
+        
+    </style>
+</head>
+<body>
+
+    <!--<div>
+        <div class="testbox2">
+
+            <h1>
+                <p>Covid19 Daily Checklist</p>
+            </h1>
+        </div>
+    </div>-->
+
+
+
+
+
+
+    <div id="content-root">
+
+
+        <div class="testbox">
+
+
+            
+
+               
+          
+
+            <div id="survey-data" class="survey-data-css">
+
+
+                <h1 class="headlinestyle">
+                    <p>Covid19-Self Assessement</p>
+                </h1>
+
+                <p style="font: 300;">Required <span style="color: red;">*</span> </p>
+
+
+                <div id="question1"  style="margin-bottom:36px">
+
+                    <label id="lblquestion1" style="display:none">This question is Required </label>
+
+                    <div class="form-group" style="padding-top:30px">
+                        <p>
+                            1. Are you experiencing any of the following symptoms ( or a combination of these symptoms)?
+                            <span style="color: red;"> *</span>
+                        </p>
+
+
+                        <p style="padding-left:10px">
+                            a) Fever
+                        <p style="padding-left:10px">
+                            b) Cough
+                        </p>
+                        <p style="padding-left:10px">
+                            c) Difficulty breathing
+                        </p>
+
+
+                    </div>
+
+                    <!--<div class="form-group">
+
+            <p>
+                <input type="radio" class="custom-control-input" id="rad1" name="rad1" value="YES" required> Yes <br>
+                <input type="radio" id="rad2" name="rad1" value="NO" required> No
+            </p>
+
+        </div>-->
+
+                    <div class="office-form-question-element">
+                        <div role="radiogroup" aria-labelledby="question1-title question1-required question1-questiontype">
+                            <div class="office-form-question-choice">
+                                <div class="radio">
+                                    <label class="office-form-question-choice-row office-form-question-choice-text-row">
+                                        <input id="rad1" name="rad1" value="YES" aria-checked="false" aria-posinset="1" aria-setsize="2" aria-label="Yes" type="radio" >
+                                        <span class="office-form-question-choice-text-span">
+                                            <span>Yes</span>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="office-form-question-choice">
+                                <div class="radio">
+                                    <label class="office-form-question-choice-row office-form-question-choice-text-row">
+                                        <input id="rad2" name="rad1" value="NO" aria-checked="false" aria-posinset="2" aria-setsize="2" aria-label="No" type="radio" >
+                                        <span class="office-form-question-choice-text-span"><span>No</span></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="question2"  style="margin-bottom:36px">
+
+                    <label id="lblquestion2" style="display:none">This question is Required </label>
+
+                    <div class="form-group" style="padding-top:30px">
+                        <p>
+                            2. Is anyone in your family experiencing any of the following symptoms?
+                            <span style="color: red;"> *</span>
+                        </p>
+                        <p style="padding-left:10px">
+                            a) Fever
+                        <p style="padding-left:10px">
+                            b) Cough
+                        </p>
+                        <p style="padding-left:10px">
+                            c) Difficulty breathing
+                        </p>
+
+                        <!--<p>
+
+                <input type="radio" id="rad3" name="rad2" value="YES"> Yes <br>
+                <input type="radio" id="rad4" name="rad2" value="NO"> No
+
+            </p>-->
+                    </div>
+
+                    <div class="office-form-question-element">
+                        <div role="radiogroup" aria-labelledby="question1-title question1-required question1-questiontype">
+                            <div class="office-form-question-choice">
+                                <div class="radio">
+                                    <label class="office-form-question-choice-row office-form-question-choice-text-row">
+                                        <input id="rad3" name="rad2" value="YES" aria-checked="false" aria-posinset="1" aria-setsize="2" aria-label="Yes" type="radio"><span class="office-form-question-choice-text-span">
+                                            <span>Yes</span>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="office-form-question-choice">
+                                <div class="radio">
+                                    <label class="office-form-question-choice-row office-form-question-choice-text-row">
+                                        <input id="rad4" name="rad2" value="NO" aria-checked="false" aria-posinset="2" aria-setsize="2" aria-label="No" type="radio">
+                                        <span class="office-form-question-choice-text-span"><span>No</span></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="question3" style="margin-bottom:36px">
+
+                    <label id="lblquestion3" style="display:none">This question is Required </label>
+
+                    <div class="form-group" style="padding-top:30px">
+                        <p>
+                            3. Are you experiencing any of the following symptoms ( or a combination of these symptoms)?
+                            <span style="color: red;"> *</span>
+                        </p>
+                        <p style="padding-left:10px">
+                            a) Muscle aches
+                        <p style="padding-left:10px">
+                            b) Fatigue
+                        </p>
+                        <p style="padding-left:10px">
+                            c) Headache
+                        </p>
+                        <p style="padding-left:10px">
+                            d) Sore throat
+                        </p>
+                        <p style="padding-left:10px">
+                            e) Runny nose
+                        </p>
+                        <!--<p>
+                <input type="radio" id="rad5" value="YES" name="rad3"> Yes <br>
+                <input type="radio" id="rad6" name="rad3" value="NO"> No
+            </p>-->
+
+                    </div>
+
+                    <div class="office-form-question-element">
+                        <div role="radiogroup" aria-labelledby="question1-title question1-required question1-questiontype">
+                            <div class="office-form-question-choice">
+                                <div class="radio">
+                                    <label class="office-form-question-choice-row office-form-question-choice-text-row">
+                                        <input id="rad5" name="rad3" value="YES" aria-checked="false" aria-posinset="1" aria-setsize="2" aria-label="Yes" type="radio"><span class="office-form-question-choice-text-span">
+                                            <span>Yes</span>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="office-form-question-choice">
+                                <div class="radio">
+                                    <label class="office-form-question-choice-row office-form-question-choice-text-row">
+                                        <input id="rad6" name="rad3" value="NO" aria-checked="false" aria-posinset="2" aria-setsize="2" aria-label="No" type="radio">
+                                        <span class="office-form-question-choice-text-span"><span>No</span></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="question4" style="margin-bottom:36px">
+
+                    <label id="lblquestion4" style="display:none">This question is Required </label>
+
+                    <div class="form-group" style="padding-top:30px">
+                        <p>
+                            4. Is anyone in your family experiencing any of the following symptoms ( or a combination of these symptoms)?<span style="color: red;"> *</span>
+                        </p>
+                        <p style="padding-left:10px">
+                            a) Muscle aches
+                        <p style="padding-left:10px">
+                            b) Fatigue
+                        </p>
+                        <p style="padding-left:10px">
+                            c) Headache
+                        </p>
+                        <p style="padding-left:10px">
+                            d) Sore throat
+                        </p>
+                        <p style="padding-left:10px">
+                            e) Runny nose
+                        </p>
+
+                        <!--<p>
+                <input type="radio" id="rad7" name="rad4" value="YES"> Yes <br>
+                <input type="radio" id="rad8" name="rad4" value="NO">  No
+            </p>-->
+
+                    </div>
+
+                    <div class="office-form-question-element">
+                        <div role="radiogroup" aria-labelledby="question1-title question1-required question1-questiontype">
+                            <div class="office-form-question-choice">
+                                <div class="radio">
+                                    <label class="office-form-question-choice-row office-form-question-choice-text-row">
+                                        <input id="rad7" name="rad4" value="YES" aria-checked="false" aria-posinset="1" aria-setsize="2" aria-label="Yes" type="radio"><span class="office-form-question-choice-text-span">
+                                            <span>Yes</span>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="office-form-question-choice">
+                                <div class="radio">
+                                    <label class="office-form-question-choice-row office-form-question-choice-text-row">
+                                        <input id="rad8" name="rad4" value="NO" aria-checked="false" aria-posinset="2" aria-setsize="2" aria-label="No" type="radio">
+                                        <span class="office-form-question-choice-text-span"><span>No</span></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="question5" style="margin-bottom:36px">
+
+                    <label id="lblquestion5" style="display:none">This question is Required </label>
+
+                    <div class="form-group" style="padding-top:30px">
+                        <p>5. Is your fever today greater than 98.6°F (37°C) <span style="color: red;"> *</span></p>
+
+                        <!--<p>
+                <input type="radio" id="rad9" name="rad5" value="YES"> Yes <br>
+                <input type="radio" id="rad10" name="rad5" value="NO"> No
+            </p>-->
+
+                    </div>
+
+                    <div class="office-form-question-element">
+                        <div role="radiogroup" aria-labelledby="question1-title question1-required question1-questiontype">
+                            <div class="office-form-question-choice">
+                                <div class="radio">
+                                    <label class="office-form-question-choice-row office-form-question-choice-text-row">
+                                        <input id="rad9" name="rad5" value="YES" aria-checked="false" aria-posinset="1" aria-setsize="2" aria-label="Yes" type="radio"><span class="office-form-question-choice-text-span">
+                                            <span>Yes</span>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="office-form-question-choice">
+                                <div class="radio">
+                                    <label class="office-form-question-choice-row office-form-question-choice-text-row">
+                                        <input id="rad10" name="rad5" value="NO" aria-checked="false" aria-posinset="2" aria-setsize="2" aria-label="No" type="radio">
+                                        <span class="office-form-question-choice-text-span"><span>No</span></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="question6" style="margin-bottom:36px">
+
+                    <label id="lblquestion6" style="display:none">This question is Required </label>
+
+                    <div class="form-group" style="padding-top:30px">
+                        <p>
+                            6. Have you travelled outside of Bangalore in the last 14 days? <span style="color: red;"> *</span>
+                        </p>
+
+                        <!--<p>
+                <input type="radio" id="rad11" name="rad6" value="YES"> Yes <br>
+                <input type="radio" id="rad12" name="rad6" value="NO"> No
+            </p>-->
+
+                    </div>
+
+                    <div class="office-form-question-element">
+                        <div role="radiogroup" aria-labelledby="question1-title question1-required question1-questiontype">
+                            <div class="office-form-question-choice">
+                                <div class="radio">
+                                    <label class="office-form-question-choice-row office-form-question-choice-text-row">
+                                        <input id="rad11" name="rad6" value="YES" aria-checked="false" aria-posinset="1" aria-setsize="2" aria-label="Yes" type="radio"><span class="office-form-question-choice-text-span">
+                                            <span>Yes</span>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="office-form-question-choice">
+                                <div class="radio">
+                                    <label class="office-form-question-choice-row office-form-question-choice-text-row">
+                                        <input id="rad12" name="rad6" value="NO" aria-checked="false" aria-posinset="2" aria-setsize="2" aria-label="No" type="radio">
+                                        <span class="office-form-question-choice-text-span"><span>No</span></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="question7" style="margin-bottom:36px">
+
+                    <label id="lblquestion7" style="display:none">This question is Required </label>
+
+                    <div class="form-group" style="padding-top:30px">
+                        <p>
+                            7. Does someone you are in close contact/area where you live have COVID-19? <span style="color: red;"> *</span>
+                        </p>
+
+
+                        <!--<p>
+                <input type="radio" id="rad13" name="rad7" value="YES"> Yes <br>
+                <input type="radio" id="rad14" name="rad7" value="NO"> No
+            </p>-->
+
+                    </div>
+
+                    <div class="office-form-question-element">
+                        <div role="radiogroup" aria-labelledby="question1-title question1-required question1-questiontype">
+                            <div class="office-form-question-choice">
+                                <div class="radio">
+                                    <label class="office-form-question-choice-row office-form-question-choice-text-row">
+                                        <input id="rad13" name="rad7" value="YES" aria-checked="false" aria-posinset="1" aria-setsize="2" aria-label="Yes" type="radio"><span class="office-form-question-choice-text-span">
+                                            <span>Yes</span>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="office-form-question-choice">
+                                <div class="radio">
+                                    <label class="office-form-question-choice-row office-form-question-choice-text-row">
+                                        <input id="rad14" name="rad7" value="NO" aria-checked="false" aria-posinset="2" aria-setsize="2" aria-label="No" type="radio">
+                                        <span class="office-form-question-choice-text-span"><span>No</span></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="question8" style="margin-bottom:36px">
+
+                    <label id="lblquestion8" style="display:none">This question is Required </label>
+
+                    <div class="form-group" style="padding-top:30px">
+                        <p>
+                            8. Do you live in an area that has been designated as Red or Amber zone? <span style="color: red;"> *</span>
+
+
+                        </p>
+
+
+                        <!--<p>
+            <input type="radio" id="rad15" name="rad8" value="YES" onclick="handleClick(this);"> Yes <br>
+            <input type="radio" id="rad16" name="rad8" value="NO" onclick="handleClick(this);"> No
+        </p>-->
+
+                    </div>
+
+                    <div class="office-form-question-element">
+                        <div role="radiogroup" aria-labelledby="question1-title question1-required question1-questiontype">
+                            <div class="office-form-question-choice">
+                                <div class="radio">
+                                    <label class="office-form-question-choice-row office-form-question-choice-text-row">
+                                        <input id="rad15" name="rad8" value="YES" aria-checked="false" aria-posinset="1" aria-setsize="2" aria-label="Yes" type="radio"><span class="office-form-question-choice-text-span">
+                                            <span>Yes</span>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="office-form-question-choice">
+                                <div class="radio">
+                                    <label class="office-form-question-choice-row office-form-question-choice-text-row">
+                                        <input id="rad16" name="rad8" value="NO" aria-checked="false" aria-posinset="2" aria-setsize="2" aria-label="No" type="radio">
+                                        <span class="office-form-question-choice-text-span"><span>No</span></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                    <div style="padding-top:30px;padding-left:18px">
+                        <input type="submit" value="SUBMIT" id="done" class="btn btn-primary" onclick="showAlert()" />
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+    </div>
+
+
+
+    <div id="Complete" style="background-color:#92D050;display:none">
+
+        <div class="WordSection1">
+
+
+            <p class="MsoNormal" align="center" style="text-align:center">
+                <b><span style="font-size:56.0pt;color:black">&#x2713;</span></b>
+            </p>
+            <p class="MsoNormal" align="center" style="text-align:center"><b><span style="font-size:30.0pt">WELCOME<o:p></o:p></span></b></p>
+            <p class="MsoNormal" align="center" style="text-align:center"><span id="completedate" style="font-size:30.0pt"><o:p></o:p></span></p>
+            <p class="MsoNormal" align="center" style="text-align:center"><b><span style="font-size:36.0pt"><o:p></o:p></span></b></p>
+            <!-- <p class="MsoNormal" align="center" style="text-align:center"><b><span style="font-size:18.0pt">Thanks for the self assessment<o:p></o:p></span></b></p> -->
+            <p class="MsoNormal" align="center" style="text-align:center"><o:p>&nbsp;</o:p></p>
+            <p class="MsoNormal" align="center" style="text-align:center"><a style="font-size:18.0pt;color:blue;" href="javascript:reloadPage()">Submit another response </a></p>
+            <p class="MsoNormal" align="center" style="text-align:center"><o:p>&nbsp;</o:p></p>
+            <p class="MsoNormal" align="center" style="text-align:center"><o:p>&nbsp;</o:p></p>
+            <p class="MsoNormal" align="center" style="text-align:center"><o:p>&nbsp;</o:p></p>
+            <p class="MsoNormal" align="center" style="text-align:center"><o:p>&nbsp;</o:p></p>
+            <p class="MsoNormal" align="center" style="text-align:center"><o:p>&nbsp;</o:p></p>
+            <p class="MsoNormal" align="center" style="text-align:center"><o:p>&nbsp;</o:p></p>
+            <p class="MsoNormal" align="center" style="text-align:center"><o:p>&nbsp;</o:p></p>
+            <p class="MsoNormal" align="center" style="text-align:center"><o:p>&nbsp;</o:p></p>
+            <p class="MsoNormal" align="center" style="text-align:center"><o:p>&nbsp;</o:p></p>
+
+        </div>
+
+     
+
+    </div>
+
+    <div id="error" style="background-color:red;display:none;">
+
+        <div class="WordSection2">
+            <p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+            <!--<p class="MsoNormal" align="center" style="text-align:center">
+        <span style="font-size:22.0pt;color:white">
+    </p>-->
+            <p class="MsoNormal" align="center" style="text-align:center">
+                <b><span style="font-size:56.0pt;color:white">&#x2718;</span></b>
+            </p>
+            <p class="MsoNormal" align="center" style="text-align:center"><b><span style="font-size:30.0pt;color:white">Stay Home, Stay Safe<o:p></o:p></span></b></p>
+            <p class="MsoNormal" align="center" style="text-align:center"><span id="errordate" style="font-size:30.0pt;color:white"><o:p></o:p></span></p>
+            <p class="MsoNormal" align="center" style="text-align:center"><b><span style="font-size:36.0pt;color:white"><o:p></o:p></span></b></p>
+            <!--<p class="MsoNormal" align="center" style="text-align:center"><b><span style="font-size:18.0pt;color:white">Thanks for the self assessment<o:p></o:p></span></b></p>-->
+            <p class="MsoNormal" align="center" style="text-align:center"><o:p>&nbsp;</o:p></p>
+            <p class="MsoNormal" align="center" style="text-align:center"><a style="font-size:18.0pt;color:blue" href="javascript:reloadPage()">Submit another response </a></p>
+            <p class="MsoNormal" align="center" style="text-align:center"><o:p>&nbsp;</o:p></p>
+            <p class="MsoNormal" align="center" style="text-align:center"><o:p>&nbsp;</o:p></p>
+            <p class="MsoNormal" align="center" style="text-align:center"><o:p>&nbsp;</o:p></p>
+            <p class="MsoNormal" align="center" style="text-align:center"><o:p>&nbsp;</o:p></p>
+            <p class="MsoNormal" align="center" style="text-align:center"><o:p>&nbsp;</o:p></p>
+            <p class="MsoNormal" align="center" style="text-align:center"><o:p>&nbsp;</o:p></p>
+            <p class="MsoNormal" align="center" style="text-align:center"><o:p>&nbsp;</o:p></p>
+            <p class="MsoNormal" align="center" style="text-align:center"><o:p>&nbsp;</o:p></p>
+            <p class="MsoNormal" align="center" style="text-align:center"><o:p>&nbsp;</o:p></p>
+
+        </div>
+
+     
+    </div>
+
+
+
+    <script type="text/javascript">
+
+        //function handleClick(myRadio) {
+        //    //if (myRadio.value == "YES" || myRadio.value == "NO") {
+        //    //    document.getElementById("done").disabled = false;
+        //    //}
+        //    //else {
+        //    //    document.getElementById("done").disabled = true;
+        //    //}
+        //}
+
+        var x = document.getElementById("Complete");
+
+        var MainForm1 = document.getElementById("content-root");
+
+        var error = document.getElementById("error");
+        var today = new Date();
+
+        function reloadPage()
+            {
+
+            //MainForm1.style.display = "block";
+            //error.style.display = "none";           
+            //x.style.display = "none";
+            location.reload();
+
+
+            }
+
+        
+
+
+        function showAlert() {
+            var radios1 = document.getElementsByName('rad1');
+            var radios2 = document.getElementsByName('rad2');
+            var radios3 = document.getElementsByName('rad3');
+            var radios4 = document.getElementsByName('rad4');
+            var radios5 = document.getElementsByName('rad5');
+            var radios6 = document.getElementsByName('rad6');
+            var radios7 = document.getElementsByName('rad7');
+            var radios8 = document.getElementsByName('rad8');
+
+            var radValue1;
+            var radValue2;
+            var radValue3;
+            var radValue4;
+            var radValue5;
+            var radValue6;
+            var radValue7;
+            var radValue8;
+
+            var j = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+
+			var monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
+								'July', 'August', 'September', 'October', 'November', 'December'];
+				
+
+            var finalformatdate = j[today.getDay() - 1]
+
+            var datetoday = today.getDate();
+
+			var month = monthNames[today.getMonth()];
+		   
+            var formatteddate;
+
+            formatteddate = finalformatdate + ',' + datetoday + ' ' + month;
+
+            var proceed = true;
+
+
+            var checked_rad1 = document.querySelector('input[name = "rad1"]:checked');
+
+            if (checked_rad1 != null) {  //Test if something was checked
+                radValue1 = checked_rad1.value;  //Alert the value of the checked.
+
+                var question1 = document.getElementById("question1");
+                var lblquestion1 = document.getElementById("lblquestion1");
+
+                question1.style.backgroundColor = 'white';
+                lblquestion1.style.display = "none";
+
+                proceed = true;
+
+            } else {
+               
+                var question1 = document.getElementById("question1");
+                var lblquestion1 = document.getElementById("lblquestion1");
+
+                question1.style.backgroundColor = 'rgb(255, 233, 233)';
+                lblquestion1.style.display = "block";
+                proceed = false;
+            }
+
+            var checked_rad2 = document.querySelector('input[name = "rad2"]:checked');
+
+            if (checked_rad2 != null) {  //Test if something was checked
+                radValue2 = checked_rad2.value;  //Alert the value of the checked.
+
+                var question2 = document.getElementById("question2");
+                var lblquestion2 = document.getElementById("lblquestion2");
+
+                question2.style.backgroundColor = 'white';
+                lblquestion2.style.display = "none";
+                proceed = true;
+
+            } else {
+
+                var question2 = document.getElementById("question2");
+                var lblquestion2 = document.getElementById("lblquestion2");
+
+                question2.style.backgroundColor = 'rgb(255, 233, 233)';
+                lblquestion2.style.display = "block";
+                proceed = false;
+            }
+
+            var checked_rad3 = document.querySelector('input[name = "rad3"]:checked');
+
+            if (checked_rad3 != null) {  //Test if something was checked
+                radValue3 = checked_rad3.value;  //Alert the value of the checked.
+
+                var question3 = document.getElementById("question3");
+                var lblquestion3 = document.getElementById("lblquestion3");
+
+                question3.style.backgroundColor = 'white';
+                lblquestion3.style.display = "none";
+                proceed = true;
+            } else {
+                var question3 = document.getElementById("question3");
+                var lblquestion3 = document.getElementById("lblquestion3");
+
+                question3.style.backgroundColor = 'rgb(255, 233, 233)';
+                lblquestion3.style.display = "block";
+                proceed = false;
+            }
+
+
+            var checked_rad4 = document.querySelector('input[name = "rad4"]:checked');
+
+            if (checked_rad4 != null) {  //Test if something was checked
+                radValue4 = checked_rad4.value;  //Alert the value of the checked.
+
+                var question4 = document.getElementById("question4");
+                var lblquestion4 = document.getElementById("lblquestion4");
+
+                question4.style.backgroundColor = 'white';
+                lblquestion4.style.display = "none";
+                proceed = true;
+
+            } else {
+                var question4 = document.getElementById("question4");
+                var lblquestion4 = document.getElementById("lblquestion4");
+
+                question4.style.backgroundColor = 'rgb(255, 233, 233)';
+                lblquestion4.style.display = "block";
+                proceed = false;
+            }
+
+
+
+
+            var checked_rad5 = document.querySelector('input[name = "rad5"]:checked');
+
+            if (checked_rad5 != null) {  //Test if something was checked
+                radValue5 = checked_rad5.value;  //Alert the value of the checked.
+
+                var question5 = document.getElementById("question5");
+                var lblquestion5 = document.getElementById("lblquestion5");
+
+                question5.style.backgroundColor = 'white';
+                lblquestion5.style.display = "none";
+                proceed = true;
+
+            } else {
+                var question5 = document.getElementById("question5");
+                var lblquestion5 = document.getElementById("lblquestion5");
+
+                question5.style.backgroundColor = 'rgb(255, 233, 233)';
+                lblquestion5.style.display = "block";
+                proceed = false;
+            }
+
+
+            var checked_rad6 = document.querySelector('input[name = "rad6"]:checked');
+
+            if (checked_rad6 != null) {  //Test if something was checked
+                radValue6 = checked_rad6.value;  //Alert the value of the checked.
+
+                var question6 = document.getElementById("question6");
+                var lblquestion6 = document.getElementById("lblquestion6");
+
+                question6.style.backgroundColor = 'white';
+                lblquestion6.style.display = "none";
+                proceed = true;
+            } else {
+                var question6 = document.getElementById("question6");
+                var lblquestion6 = document.getElementById("lblquestion6");
+
+                question6.style.backgroundColor = 'rgb(255, 233, 233)';
+                lblquestion6.style.display = "block";
+                proceed = false;
+            }
+
+            var checked_rad7 = document.querySelector('input[name = "rad7"]:checked');
+
+            if (checked_rad7 != null) {  //Test if something was checked
+                radValue7 = checked_rad7.value;  //Alert the value of the checked.
+
+                var question7 = document.getElementById("question7");
+                var lblquestion7 = document.getElementById("lblquestion7");
+
+                question7.style.backgroundColor = 'white';
+                lblquestion7.style.display = "none";
+                proceed = true;
+            } else {
+                var question7 = document.getElementById("question7");
+                var lblquestion7 = document.getElementById("lblquestion7");
+
+                question7.style.backgroundColor = 'rgb(255, 233, 233)';
+                lblquestion7.style.display = "block";
+                proceed = false;
+            }
+
+
+            var checked_rad8 = document.querySelector('input[name = "rad8"]:checked');
+
+            if (checked_rad8 != null) {  //Test if something was checked
+                radValue8 = checked_rad8.value;  //Alert the value of the checked.
+
+                var question8 = document.getElementById("question8");
+                var lblquestion8 = document.getElementById("lblquestion8");
+
+                question8.style.backgroundColor = 'white';
+                lblquestion8.style.display = "none";
+                proceed = true;
+
+            } else {
+                var question8 = document.getElementById("question8");
+                var lblquestion8 = document.getElementById("lblquestion8");
+
+                question8.style.backgroundColor = 'rgb(255, 233, 233)';
+                lblquestion8.style.display = "block";
+                proceed = false;
+            }
+
+            if (proceed) {
+
+            if (radValue1 == 'YES' || radValue2 == 'YES' || radValue3 == 'YES' || radValue4 == 'YES' || radValue5 == 'YES' || radValue6 == 'YES' || radValue7 == 'YES' || radValue8 == 'YES') {
+                //alert('Hi');
+
+                MainForm1.style.display = "none";
+
+
+                error.style.display = "block";
+
+               // var j = ['Monday', 'Tuesday','Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday' ];
+               
+                
+
+                //var finalformatdate = j[today.getDay() - 1]
+
+                //var datetoday = today.getDate();
+
+                //var month = today.toLocaleString('default', { month: 'long' });
+
+                //var formatteddate;
+
+                //formatteddate = finalformatdate + ',' + datetoday + ' ' + month;
+
+                document.getElementById("errordate").innerHTML = formatteddate;
+            }
+            else {
+                MainForm1.style.display = "none";
+                x.style.display = "block";
+
+               // var datecomplete = today.toDateString();
+
+                
+
+
+                document.getElementById("completedate").innerHTML = formatteddate;
+                }
+            }
+        }
+    </script>
+
+
+
+</body>
+
+
+
+
+
+</html>
+
